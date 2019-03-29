@@ -6,7 +6,7 @@ firewall-cmd --zone=public --permanent --add-port=5900-6000/tcp
 
 wget -N http://files.virtualizor.com/install.sh 
 chmod 0755 install.sh 
-./install.sh email=cody@spartandigital.co kernel=kvm lvg=virtualizor
+./install.sh email=your-email kernel=kvm lvg=virtualizor
 
 
 cat /proc/mdstat
