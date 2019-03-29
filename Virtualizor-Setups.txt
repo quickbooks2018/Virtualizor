@@ -1,0 +1,61 @@
+###Installation###
+For RHEL & CentOS 7+
+
+firewall-cmd --zone=public --permanent --add-port=4081-4085/tcp
+firewall-cmd --zone=public --permanent --add-port=5900-6000/tcp 
+
+wget -N http://files.virtualizor.com/install.sh 
+chmod 0755 install.sh 
+./install.sh email=cody@spartandigital.co kernel=kvm lvg=virtualizor
+
+
+cat /proc/mdstat
+
+umount /dev/md1
+
+fdisk -l
+
+fdisk /dev/md1
+
+p -print
+t-type
+L list
+8e LVM
+
+fdisk -l
+
+/dev/md1p1
+
+pvcreate /dev/md1p1
+vgcreate virtualizor /dev/md1p1
+
+
+
+
+###Now make sure remove an entry from in /etc/fstab ----> /dev/md1 UUID=123225 /data ###
+
+
+
+
+###Installation###
+
+LVM
+https://www.howtogeek.com/howto/40702/how-to-manage-and-use-lvm-logical-volume-management-in-ubuntu/
+
+https://www.slashroot.in/configuring-lvm-top-raid-alternative-way-partitioning-raid-devices
+
+BRIDGE
+https://www.virtualizor.com/docs/admin/kvm-bridge/
+
+
+
+
+
+
+#https://wiki.gentoo.org/wiki/Device-mapper
+dmsetup remove /dev/mapper/virtualizor-lvol0
+
+
+HA PROXY
+https://www.virtualizor.com/docs/admin/manage-vps-domain-forwarding/
+              
