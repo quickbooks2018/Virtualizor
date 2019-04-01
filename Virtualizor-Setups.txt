@@ -15,25 +15,16 @@ umount /dev/md1
 
 fdisk -l
 
-fdisk /dev/md1
+pvcreate /dev/md125
+vgcreate virtualizor /dev/md125
 
-p -print
-t-type
-L list
-8e LVM
+shutdown -r now
 
-fdisk -l
+after reboot
 
-/dev/md1p1
-
-pvcreate /dev/md1p1
-vgcreate virtualizor /dev/md1p1
-
-
-
+pvdisplay
 
 ###Now make sure remove an entry from in /etc/fstab ----> /dev/md1 UUID=123225 /data ###
-
 
 
 
