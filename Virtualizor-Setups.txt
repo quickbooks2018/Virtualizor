@@ -17,7 +17,7 @@ fdisk -l
 
 fdisk /dev/md124
 
-RAID AND LVM COMBINATION ON ONLY WORKS AT STARTUP INSTALLATION 
+RAID AND LVM COMBINATION ON ONLY WORKS AT STARTUP INSTALLATION ---> Centos 7 (might be a bug, if you do via command line & mount /etc/fstab after reboot ---> pvdisplay ---> lvdisplay ---> vgdisplay shows nothing)
 
 (if you created via command line, it is not persistent, in such  case go for file base storage with RAID)
 
