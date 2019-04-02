@@ -15,8 +15,10 @@ umount /dev/md1
 
 fdisk -l
 
-pvcreate /dev/md125
-vgcreate virtualizor /dev/md125
+fdisk /dev/md124
+
+pvcreate /dev/md124p1
+vgcreate virtualizor /dev/md124p1
 
 shutdown -r now
 
