@@ -19,7 +19,7 @@ fdisk /dev/md124
 
 RAID AND LVM COMBINATION ON ONLY WORKS AT STARTUP INSTALLATION 
 
-(if you created via command line, it is not persistent, in such go for file base storage with RAID)
+(if you created via command line, it is not persistent, in such  case go for file base storage with RAID)
 
 shutdown -r now
 
